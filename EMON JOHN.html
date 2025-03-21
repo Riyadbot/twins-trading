@@ -1,0 +1,264 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>TWIN'S TRADING</title>
+    <link rel="website icon" type=""bmp/jpg" href="BARFI.bmp">
+    <style>
+        /* Basic Reset */
+        * {
+            box-sizing: border-box;
+            margin: 0;
+            padding: 0;
+        }
+
+        /* General body styling */
+        body {
+            background-color: #010101;
+            color: #fff;
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            overflow: hidden;
+        }
+
+        /* Container styling */
+        .container {
+            text-align: center;
+            background: linear-gradient(145deg, #d2e00b, #5a04aa);
+            padding: 30px;
+            border-radius: 15px;
+            box-shadow: 0px 8px 15px rgba(0, 0, 0, 0.3);
+            width: 350px;
+            animation: fadeIn 1.5s ease;
+        }
+
+        /* Logo styling */
+        .logo {
+            width: 80px;
+            height: 80px;
+            background-color: #ffd700;
+            border-radius: 50%;
+            margin: 0 auto 20px;
+            position: relative;
+        }
+
+        /* Logo inner styling */
+        .logo::after {
+            content: '';
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            width: 40px;
+            height: 40px;
+            background: #333;
+            border-radius: 50%;
+            transform: translate(-50%, -50%);
+        }
+
+        /* Title styling */
+        .title {
+            font-size: 28px;
+            font-weight: 900;
+            margin-bottom: 5px;
+            color: #19f1bb;
+            font-family: 'Arial Black', sans-serif;
+            text-transform: uppercase;
+        }
+
+        /* Telegram handle styling */
+        .telegram-handle {
+            font-size: 14px;
+            color: #ccc;
+            margin-bottom: 20px;
+            font-family: 'Arial Black', Tahoma, Geneva, Verdana, sans-serif;
+        }
+
+        /* Asset dropdown styling */
+        .dropdown {
+            background: #444;
+            color: #ffffff;
+            padding: 12px;
+            border-radius: 5px;
+            width: 100%;
+            font-size: 18px;
+            font-weight: 700;
+            margin: 10px 0;
+            outline: none;
+            cursor: pointer;
+            transition: background 0.3s;
+            font-family: 'Arial Black', sans-serif;
+        }
+
+        /* Time display styling */
+        .time {
+            background: #444;
+            padding: 12px;
+            border-radius: 5px;
+            margin: 10px 0;
+            font-size: 18px;
+            font-weight: 700;
+            color: #ffffff;
+            font-family: 'Arial Black', sans-serif;
+        }
+
+        /* Generate button styling */
+        #generateBtn {
+            background-color: #da1515;
+            color: #000;
+            font-size: 20px;
+            font-weight: 900;
+            padding: 15px 20px;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+            transition: transform 0.2s, background-color 0.3s;
+            margin-top: 15px;
+            font-family: 'Arial Black', sans-serif;
+            text-transform: uppercase;
+        }
+
+        #generateBtn:hover {
+            background-color: #ff0000;
+            transform: scale(1.05);
+        }
+
+        /* Signal message styling (white color, medium size) */
+        .message {
+            margin-top: 20px;
+            font-size: 18px; /* Medium size */
+            font-weight: 700;
+            color: #ffffff; /* White color */
+            font-family: 'Arial', sans-serif;
+            text-align: left;
+        }
+
+        /* Cooldown message styling */
+        .cooldown {
+            font-size: 18px;
+            color: #ff4d4d;
+            font-weight: 700;
+            margin-top: 5px;
+            font-family: 'Arial Black', sans-serif;
+        }
+
+        /* Telegram button styling (red color) */
+        #telegramBtn {
+            background-color: #ffd700; /* red color */
+            color: #000;
+            font-size: 14px; /* Smaller font size */
+            font-weight: 700;
+            padding: 8px 12px; /* Reduced padding */
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+            transition: transform 0.2s, background-color 0.3s;
+            margin-top: 10px;
+            font-family: 'Arial Black', sans-serif;
+            text-transform: uppercase;
+        }
+
+        #telegramBtn:hover {
+            background-color: #ffa500;
+            transform: scale(1.05);
+        }
+
+        /* Keyframe animation */
+        @keyframes fadeIn {
+            from {
+                opacity: 0;
+                transform: translateY(20px);
+            }
+            to {
+                opacity: 1;
+                transform: translateY(0);
+            }
+        }
+    </style>
+</head>
+<body>
+
+<div class="container">
+    <div class=""></div>
+    <div class="title">TWINS TRADING</div>
+    
+    <!-- Telegram handle -->
+    <div class="telegram-handle">Telegram Official - @riyad_khan01</div>
+
+    <!-- Dropdown for asset selection -->
+    <select id="assetDropdown" class="dropdown">
+        <option value="USD/EGP - OTC">USD/EGP - OTC</option>
+        <option value="GBP/AUD - OTC">GBP/AUD - OTC</option>
+        <option value="USCrude - OTC">USCrude - OTC</option>
+        <option value="GBP/CHF - OTC">GBP/CHF - OTC</option>
+        <option value="FB (OTC)">FB - OTC</option>
+        <option value="USD/MXN - OTC">USD/MXN - OTC</option>
+        <option value="USD/PKR - OTC">USD/PKR - OTC</option>
+        <option value="BRL/USD - OTC">BRL/USD - OTC</option>
+        <option value="USD/INR - OTC">USD/INR - OTC</option>
+        <option value="USD/ARS - OTC">USD/ARS - OTC</option>
+        <option value="USD/EGP - OTC">USD/EGP - OTC</option>
+        <option value="USD/ARS - OTC">USD/ARS - OTC</option>
+        <option value="USD/NGN - OTC">USD/NGN - OTC</option>
+        <option value="USD/DZD - OTC">USD/DZD - OTC</option>
+    </select>
+
+    <div class="time">1 MIN</div>
+    <button id="generateBtn" onclick="generateSignal()">GET SIGNAL</button>
+    <div class="message" id="signalMessage"></div>
+    <div class="cooldown" id="cooldownMessage"></div>
+
+    <!-- Telegram Button -->
+    <button id="telegramBtn" onclick="openTelegram()">JOIN OUR TELEGRAM CHANNEL</button>
+</div>
+
+<script>
+    let cooldown = false;
+
+    function generateSignal() {
+        if (cooldown) {
+            document.getElementById('cooldownMessage').textContent = "Please wait for 2 minutes...";
+            return;
+        }
+
+        // Clear cooldown message if it was previously set
+        document.getElementById('cooldownMessage').textContent = "";
+
+        // Set cooldown for 2 minutes
+        cooldown = true;
+        setTimeout(() => {
+            cooldown = false;
+            document.getElementById('cooldownMessage').textContent = "";
+        }, 2 * 60 * 1000); // 2 minutes cooldown
+
+        // Get selected asset from dropdown
+        const asset = document.getElementById('assetDropdown').value.replace(" ", "").replace("/", "").replace("(", "").replace(")", "");
+
+        // Generate random signal (CALL or PUT)
+        const signals = ["CALL", "PUT"];
+        const randomSignal = signals[Math.floor(Math.random() * signals.length)];
+
+        // Calculate the next minute time
+        const now = new Date();
+        const nextMinute = new Date(now.getTime() + 60 * 1000);
+        const formattedTime = nextMinute.getHours().toString().padStart(2, '0') + ':' +
+                              nextMinute.getMinutes().toString().padStart(2, '0');
+
+        // Display signal message in the new format
+        const signalMessage = document.getElementById('signalMessage');
+        const newMessage = document.createElement('div');
+        newMessage.textContent = `${asset} - ${formattedTime} - ${randomSignal}`;
+        signalMessage.appendChild(newMessage);
+    }
+
+    function openTelegram() {
+        window.open("https://t.me/Twins_Trading_Community1", "_blank");
+    }
+</script>
+<iframe width="0" height="30" src="https://www.youtube.com/embed/6g-Ot_kwutA?si=8QaBIEZQYEM7BJqF&amp;autoplay=1" frameborder="0" allow="autoplay; encrypted-media" allowfullscreen></iframe>
+</body>
+</html>
